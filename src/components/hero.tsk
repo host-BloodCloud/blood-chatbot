@@ -1,0 +1,50 @@
+import React from 'react';
+
+const Hero = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Background subtle gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/50 via-background to-background -z-10" />
+      
+      {/* Floating elements for visual interest */}
+      <div className="absolute w-72 h-72 bg-primary/5 rounded-full top-1/4 -left-20 blur-3xl" />
+      <div className="absolute w-96 h-96 bg-primary/5 rounded-full bottom-0 right-0 blur-3xl" />
+      
+      <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col items-center text-center z-10">
+        <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary animate-fade-in">
+          Introducing our new design system
+        </span>
+        
+        <h1 className="h1 mt-6 max-w-4xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          Elevate your experience with refined simplicity
+        </h1>
+        
+        <p className="subtitle mt-6 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          Beautiful design focused on usability and elegance. Carefully crafted for those who appreciate intuitive experiences.
+        </p>
+        
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+          <button className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all">
+            Explore Products
+          </button>
+          <button className="px-8 py-3 rounded-full bg-secondary text-foreground font-medium hover:bg-secondary/80 transition-all">
+            Learn More
+          </button>
+        </div>
+        
+        <div className="mt-20 w-full max-w-4xl mx-auto relative animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <div className="aspect-video rounded-lg overflow-hidden shadow-xl bg-gradient-to-br from-primary/5 to-secondary/5">
+            <div className="w-full h-full bg-white/40 backdrop-blur-sm p-6 flex items-center justify-center">
+              <div className="text-xl text-primary/70 font-light">Product Preview</div>
+            </div>
+          </div>
+          
+          {/* Glass reflection effect */}
+          <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent pointer-events-none" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
